@@ -200,9 +200,9 @@ def predict_deal_size(df: pd.DataFrame, n_folds = 5) -> tuple:
     y = cp.array(df['deal_size'].to_numpy(), dtype=np.float32)
     
     rf_params = {
-        "n_estimators": 10,
-        "max_depth": 128,
-        "n_bins": 256,
+        "n_estimators": 20,
+        "max_depth": 144,
+        "n_bins": 1024,
     }
     print(f"Random forest regressor params: {rf_params}")
     rf = RandomForestRegressor(
